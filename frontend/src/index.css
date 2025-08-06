@@ -1,5 +1,8 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kablammo&family=Kalnia+Glaze:wght@100..700&family=Roboto+Slab:wght@100..900&family=Rubik+Mono+One&family=Timmana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
 
 * {
   box-sizing: border-box;
@@ -11,7 +14,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Kablammo", system-ui;
+  font-family: "Roboto Mono", monospace;
 }
 
 a {
