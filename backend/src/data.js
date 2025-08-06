@@ -91,7 +91,7 @@ export const sample_foods = [
       id: 2,
       name: 'srihari',
       email: 'srihari@gmail.com',
-      password: '12345',
+      password: '123456',
       address: 'Adayar chennai',
       isAdmin: true,
     },
