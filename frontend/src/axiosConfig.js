@@ -7,4 +7,4 @@ const api = axios.create({
     : 'https://foodiespicy00.onrender.com/',
 })
 
-
+export default api;
