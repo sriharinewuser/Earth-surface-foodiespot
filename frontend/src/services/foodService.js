@@ -1,4 +1,5 @@
-import axios from 'axios';
+// import axios from 'axios';
+import api from '../api/axiosInstance';
 
 export const getAll = async () => {
   const { data } = await axios.get('/api/foods');
@@ -27,11 +28,11 @@ export const getById = async foodId => {
 };
 
 export async function deleteById(foodId) {
-  await axios.delete('/api/foods/' + foodId);
+  await api.delete('/api/foods/' + foodId);
 }
 
 export async function update(food) {
-  await axios.put('/api/foods', food);
+  await api.put('/api/foods', food);
 }
 
 export async function add(food) {
