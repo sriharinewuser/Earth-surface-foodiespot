@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 dotenv.config();
+
 import { fileURLToPath } from 'url';
 import express from 'express';
 import cors from 'cors';
