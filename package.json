@@ -1,5 +1,5 @@
 {
-  "name": "Earth-surface-foodiespot",
+  "name": "earth-surface-foodiespot",
   "version": "1.0.0",
   "description": "## 1. Demo And Installation",
   "main": "index.js",
@@ -14,5 +14,13 @@
   "license": "ISC",
   "engines": {
     "node": ">=18 <19"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sriharinewuser/Earth-surface-foodiespot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sriharinewuser/Earth-surface-foodiespot/issues"
+  },
+  "homepage": "https://github.com/sriharinewuser/Earth-surface-foodiespot#readme"
 }
