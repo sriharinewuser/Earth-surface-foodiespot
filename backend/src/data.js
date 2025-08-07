@@ -83,7 +83,7 @@ export const sample_foods = [
       id: 1,
       name: 'sri',
       email: 'sri@gmail.com',
-      password: '12345',
+      password: '123456',
       address: 'chennai',
       isAdmin: false,
     },
