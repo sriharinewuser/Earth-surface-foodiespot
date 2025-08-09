@@ -13,7 +13,11 @@ export const AuthProvider = ({ children }) => {
       setUser(user);
       toast.success('Login Successful');
     } catch (err) {
-      toast.error(err.response.data);
+      if (err.response && err.response.data) {
+        toast.error(err.response.data);
+      } else {
+        toast.error('Login failed. Please try again.');
+      }
     }
   };
 
