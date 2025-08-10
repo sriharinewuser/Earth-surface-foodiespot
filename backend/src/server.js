@@ -6,10 +6,9 @@ import cors from 'cors';
 import foodRouter from './routers/food.router.js';
 import userRouter from './routers/user.router.js';
 import orderRouter from './routers/order.router.js';
-// import uploadRouter from './routers/upload.router.js';
-
 import { dbconnect } from './config/database.config.js';
 import path, { dirname } from 'path';
+
 dbconnect();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -17,17 +16,35 @@ const __dirname = dirname(__filename);
 
 const app = express();
 app.use(express.json());
+
+// Allowed origins
+const allowedOrigins = [
+  'https://earth-surface-foodiespot.vercel.app', // frontend on Vercel
+  'http://localhost:3000', // local dev
+  'http://localhost:5173'
+];
+
 app.use(
   cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
     credentials: true,
-    origin: ['http://localhost:3000','https://earth-surface-foodiespot.vercel.app','https://foodiespicy00.onrender.com'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
   })
 );
+
+// Handle OPTIONS preflight requests globally
+app.options('*', cors());
 
 app.use('/api/foods', foodRouter);
 app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
-// app.use('/api/upload', uploadRouter);
 
 const publicFolder = path.join(__dirname, 'public');
 app.use(express.static(publicFolder));
