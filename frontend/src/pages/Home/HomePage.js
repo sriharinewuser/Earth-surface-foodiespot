@@ -10,13 +10,8 @@ import {
   search,
 } from '../../services/foodService';
 import NotFound from '../../components/NotFound/NotFound';
-import axios from 'axios';
-import { response } from 'express';
 
 const initialState = { foods: [], tags: [] };
-
-
-
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -35,9 +30,6 @@ export default function HomePage() {
   const { searchTerm, tag } = useParams();
 
   useEffect(() => {
-
-   
-
     getAllTags().then(tags => dispatch({ type: 'TAGS_LOADED', payload: tags }));
 
     const loadFoods = tag
