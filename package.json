@@ -14,16 +14,6 @@
   "license": "ISC",
   "engines": {
     "node": ">=18 <19"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sriharinewuser/Earth-surface-foodiespot.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sriharinewuser/Earth-surface-foodiespot/issues"
-  },
-  "homepage": "https://github.com/sriharinewuser/Earth-surface-foodiespot#readme",
-  "dependencies": {
-    "react-scripts": "^0.0.0"
+
   }
 }
