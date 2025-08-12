@@ -13,11 +13,7 @@ export const AuthProvider = ({ children }) => {
       setUser(user);
       toast.success('Login Successful');
     } catch (err) {
-      if (err.response && err.response.data) {
-        toast.error(err.response.data);
-      } else {
-        toast.error('Login failed. Please try again.');
-      }
+      toast.error(err.response.data);
     }
   };
 
@@ -51,7 +47,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ user, login, logout ,register,updateProfile,changePassword}}
+      value={{ user, login, logout, register, updateProfile, changePassword }}
     >
       {children}
     </AuthContext.Provider>
